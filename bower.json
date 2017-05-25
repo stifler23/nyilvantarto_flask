@@ -1,0 +1,21 @@
+{
+  "name": "�asd",
+  "homepage": "https://github.com/stifler23/nyilvantarto_flask",
+  "description": "asd",
+  "main": "asd",
+  "keywords": [
+    "asd"
+  ],
+  "authors": [
+    "asd"
+  ],
+  "license": "asd",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
