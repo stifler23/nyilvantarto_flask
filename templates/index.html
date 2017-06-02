@@ -14,22 +14,25 @@
 <script type="text/javascript" src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
 
 
 <body>
 <nav class="navbar container">
 <div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3">
 	<div class="row row-centered">
-		<button id="1" type="button" class="menu-item btn btn-primary col-sm-3 col-md-3 col-xs-12 col-centered">menu1</button>
-		<button id="2" type="button" class="menu-item btn btn-secondary col-sm-3 col-md-3 col-xs-12 col-centered">menu2</button>
-		<button id="3" type="button" class="menu-item btn btn-secondary col-sm-3 col-md-3 col-xs-12 col-centered">menu3</button>
+		<button id="1" type="button" class="menu-item btn btn-primary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)">menu1</button>
+		<button id="2" type="button" class="menu-item btn btn-secondary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)">menu2</button>
+		<button id="3" type="button" class="menu-item btn btn-secondary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)">menu3</button>
 	</div>
 </div>	
 </nav>
 <div id="1" class="content container col-md-8 col-md-offset-2">
-	content1
+	<h1>Hello{{ user }} </h1>
+	
 </div>
-<div id="2" class="content container col-md-8 col-md-offset-2">
+<div id="2" class="inactive-content content container col-md-8 col-md-offset-2">
 	<h1>Dev környezet web appoz</h1>
 	javascript package manager (nodejs) : npm <br>
 	<code>apt install nodejs</code> <br>
@@ -57,11 +60,15 @@
 	<code>pip install flask</code>
 	
  </div>
+<div id="3" class="inactive-content content container col-md-8 col-md-offset-2">
+	logout
 
 
-<script>
-	console.log("majd holnap...")
-</script>
+
+
+</div>
+
+
 
 </body>
 </html>

@@ -1,21 +1,14 @@
 {
-  "name": "�asd",
-  "homepage": "https://github.com/stifler23/nyilvantarto_flask",
-  "description": "asd",
-  "main": "asd",
-  "keywords": [
-    "asd"
-  ],
-  "authors": [
-    "asd"
-  ],
-  "license": "asd",
+  "//": "ezt a file-t a bower inittel generáltuk", 
+  "//": "tartalmazza a frontend függőségeket", 
+  "//": "telepiteni a bower install paranccsal lehet", 
+  "name": "nyilvantarto",
+  "description": "nyilvantarosdlfgkjsdg",
+  "main": "",
+  "license": "MIT",
+  "homepage": "sdsdf.hu",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }
