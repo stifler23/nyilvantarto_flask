@@ -34,61 +34,51 @@
       <button class="add btn-success" onclick="addMunkanap()">+</button>
     </div>
 
-    <div class="munkanapok">
-      Ird be a munkanapot: 
-      <form id="munkanapItems">
-        <div class="new_munkanap row">
-            <button class="remove btn-danger" onclick="removeMunkanap(this.id)">-</button>
-          <div class="col-xs-6 col-sm-2">
-            <input type="text" placeholder="dátum" class="datum_mezo" >
+     <div class="munkanapok">
+      <h3>Ird be a munkanapot: </h3>
+      <form id="munkanapItems row">
+        <div class="new_munkanap ">
+          <button class="remove btn-danger" onclick="removeMunkanap(this.id)">-</button>
+          <div class="col-xs-6 col-sm-12">
+            <input type="text" placeholder="dátum" class="datum_mezo form-control" >
           </div>
-          <div class="col-xs-6 col-sm-2">
-            <input type="number" min="0.5" max="12" step="0.5" class="munkaora" placeholder="munkaóra">
+          <div class="col-xs-6 col-sm-12">
+            <input type="number" min="0.5" max="12" step="0.5" class="munkaora form-control" placeholder="munkaóra">
           </div>
-           <div class="col-xs-12 col-sm-6">
-            <textarea rows="3" placeholder="megjegyzés"></textarea>
-           </div>
+          <div class="col-xs-12 col-sm-6">
+            <textarea rows="3" class="form-control" placeholder="megjegyzés"></textarea>
+          </div>
         </div>
       </form>
     </div>
 </div>
-<div id="2" class="inactive-content content container col-md-8 col-md-offset-2">
-	<h1>Dev környezet web appoz</h1>
-	javascript package manager (nodejs) : npm <br>
-	<code>apt install nodejs</code> <br>
-	web package manager: <br>
-	<code>bower npm install --global bower</code> <br>
-	web package-ek telepítése a static mappába: 
-	<code>bower install bootstrap</code> <br>
+<div id="2" class="inactive-content content container col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
 
-	<h2>Backend: </h2>
-	Python3 telepítése
-	<code>apt install pyhton3 </code> <br>
-	
-	Python csomagkezelője: pip
-	 <code>apt install pyhton3-pip</code> <br>
-	
-	<h3>Python csomag: virtualenv</h3> 
-	<code>sudo pip install virtualenv</code> <br>
-	
-	Virtualenv: elszeparált környezet az adott fejlesztéséhez... létrehozása:<br>
-	<code>virtual -p python3 /home/userm/virtualenv/sajat_appom</code> <br>
-	A virualenvet létrehozás után aktiválni kell : <br>
-	<code>source /home/userem/virtualenv/sajat_appom/bin/activate </code> <br>
-	Ezután minden amit pythonban csinálunk a virtualenven belül fog müködni CSAK. <br>
-	Python csomagok telepítése: <br>
-	<code>pip install flask</code>
-	
- </div>
-<div id="3" class="inactive-content content container col-md-8 col-md-offset-2">
-	logout
-
-
-
-
+  <h1> Dev környezet web apphoz </h1>
+  javascript package manager (nodejs) : npm  <br>
+  <code>apt install nodejs...</code>  <br>
+  web package manager: <br>
+  <code>bower ( npm install --global bower ) </code> <br>
+  Web package-ek telepítése a static mappába: <br>
+  <code>bower install bootstrap </code>    <br>
+  <h2>BackEnd: </h2> <br>
+  Python3  telepítése: <br>
+  <code>apt install python3 </code> <br>
+  Python csomagkezelője: pip 
+  <code>apt install python3-pip </code> <br>
+  <h3>Python csomag: virtualenv </h3>
+  <code>sudo pip install virtualenv </code> <br>
+  Virtualenv: elszeparált környezet az adott fejlesztéshez... Létrehozása: <br>
+  <code>virtualenv -p python3 /home/userem/virtualenv/sajat_appom </code> <br>
+  A virtialenv-et létrehozás után aktiválni kell: <br>
+  <code>source /home/userem/virtualenv/sajat_appom/bin/activate</code> <br>
+  Ezután minden amit pythonban csinálunk, a virtualenv-en belül fog működni CSAK.  <br>
+  Python csomagok telepítése:  <br>
+  <code>pip install flask</code> <br>
 </div>
-
-
+<div id="3" class="inactive-content content container col-md-8 col-md-offset-2">
+Logout...
+</div>
 
 </body>
 </html>
