@@ -2,50 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-
-<title>FLask app</title>
-
-
-
-
+<title>Flask App</title>
+<script type="text/javascript" src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script><script type="text/javascript" src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}"><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"><script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
 </head>
-<script type="text/javascript" src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
-
-
 
 <body>
 <nav class="navbar container">
-<div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3">
-	<div class="row row-centered">
-		<button id="1" type="button" class="menu-item btn btn-primary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)">menu1</button>
-		<button id="2" type="button" class="menu-item btn btn-secondary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)">menu2</button>
-		<button id="3" type="button" class="menu-item btn btn-secondary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)">menu3</button>
-	</div>
-</div>	
+  <div class="menu-row col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3">
+    <div class="row row-centered">
+   <button id="1" type="button" class="menu-item btn btn-primary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)">Menu1</button>
+   <button id="2" type="button" class="menu-item btn btn-secondary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)">Menu2</button>
+   <button id="3" type="button" class="menu-item btn btn-secondary col-sm-3 col-md-3 col-xs-12 col-centered" onclick="switchMenu(this.id)" >Menu3</button>
+    </div>
+  </div>
+
 </nav>
-<div id="1" class="content container col-md-8 col-md-offset-2">
-	  <h1>Hello {{ user }} </h1>
+<div id="1" class="content container col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+  {# a {{ jelek közötti rész a jinja2 template engine-hez tartozik.  #}
+  {#   további információk: http://jinja.pocoo.org/docs/2.9/ #}
+  <h1>Hello {{ user }} </h1>
     <div class=add_button>
-      <button class="add btn-success" onclick="addMunkanap()">+</button>
+      <button class="add btn btn-success" onclick="addMunkanap()">+</button>
     </div>
 
-     <div class="munkanapok">
+    <div class="munkanapok">
       <h3>Ird be a munkanapot: </h3>
-      <form id="munkanapItems row">
+      <form id="munkanapItems" class="row">
         <div class="new_munkanap ">
-          <button class="remove btn-danger" onclick="removeMunkanap(this.id)">-</button>
+          <button class="remove btn btn-danger" onclick="removeMunkanap(this.id)">-</button>
           <div class="col-xs-6 col-sm-12">
             <input type="text" placeholder="dátum" class="datum_mezo form-control" >
           </div>
           <div class="col-xs-6 col-sm-12">
             <input type="number" min="0.5" max="12" step="0.5" class="munkaora form-control" placeholder="munkaóra">
           </div>
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 col-sm-12">
             <textarea rows="3" class="form-control" placeholder="megjegyzés"></textarea>
           </div>
         </div>

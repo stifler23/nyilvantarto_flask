@@ -1,3 +1,10 @@
+	/*jshint esnext: true */
+	/*jshint devel: true */
+	/*jshint node: true */
+	/*jshint browser: true */
+	/*jshint jquery: true */
+
+
 	function switchMenu(clickedId) {
 		console.log(clickedId+" megnyomva...");
 	$(".content").css('display', 'none');
@@ -10,3 +17,9 @@
 	}
 
 
+function addMunkanap() {
+	$('#munkanapItems').append(`
+		<div>Hello</div>
+
+		`);
+}
